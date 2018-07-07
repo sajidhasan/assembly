@@ -8,7 +8,7 @@ jmp adder
 printer:
     mov ah, 2
     mov dl, al
-    add dl , '0'
+    add dl , 48
     int 21h
     jmp finish
               
