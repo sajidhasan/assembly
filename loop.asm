@@ -4,7 +4,7 @@ org 100h
 ; add your code here
 
 mov bh, 1
-mov bl, 5
+mov cx, 5
 
 label:
     mov dl, bh
@@ -12,13 +12,11 @@ label:
     mov ah, 2
     int 21h
     inc bh
-    dec bl
     
 cmp bl, 0
-jz finish
-jmp label
+LOOP label
 
-finish
+finish:
 
 ret
 
